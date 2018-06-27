@@ -7,22 +7,22 @@ function quickSort(arr, left, right) {
    while (i < j) {
       while (arr[i] < mid) {
          i++;
-      };
+      }
       while (arr[j] > mid) {
          j--;
-      };
+      }
       if (i <= j) {
-         var tmp=arr[i];
-         arr[i]=arr[j];
-         arr[j]=tmp;
+         var tmp = arr[i];
+         arr[i] = arr[j];
+         arr[j] = tmp;
          i++;
          j--;
-      };
+      }
    };
-   if (left<j){
+   if (left < j) {
       quickSort(arr, left, j);
    };
-   if (i<right){
+   if (i < right) {
       quickSort(arr, i, right)
    };
    return arr;

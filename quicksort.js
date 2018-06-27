@@ -1,4 +1,4 @@
-"user scrict";
+"user strict";
 arr = [4, 15, -7, 5, 3, 6, -5, 6, 0, 2, 1];
 function quickSort(arr, left, right) {
    var mid = arr[Math.floor((right + left) / 2)];

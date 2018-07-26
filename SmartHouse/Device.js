@@ -14,7 +14,7 @@ function Device (type, name) {
       return this._name;
    };
    Device.prototype.setName = function(name){
-      this.name = name;
+      this._name = name;
    };
    Device.prototype.getType = function(){
       return this._type;

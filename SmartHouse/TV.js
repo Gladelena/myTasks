@@ -28,12 +28,12 @@ function TV(name) {
       }
    };
    TV.prototype.plusChannel = function() {
-      if (this.channelNumber>=MIN_CHANNEL_NUMBER && this.channelNumber<MAX_CHANNEL_NUMBER) {
+      if (this.channelNumber >= MIN_CHANNEL_NUMBER && this.channelNumber < MAX_CHANNEL_NUMBER) {
          this.channelNumber++;
       }
    };
    TV.prototype.minusChannel = function() {
-      if(this.channelNumber>MIN_CHANNEL_NUMBER) {
+      if(this.channelNumber > MIN_CHANNEL_NUMBER) {
          this.channelNumber--;
       }
    };
@@ -41,12 +41,12 @@ function TV(name) {
       return this.volume;
    };
    TV.prototype.plusVolume = function() {
-      if(this.volume<this.MAX_VOLUME) {
+      if(this.volume < this.MAX_VOLUME) {
          this.volume++;
       }
    };
    TV.prototype.minusVolume = function() {
-      if(this.volume>this.MIN_VOLUME) {
+      if(this.volume > this.MIN_VOLUME) {
          this.volume--;
       }
    };

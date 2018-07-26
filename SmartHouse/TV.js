@@ -29,12 +29,12 @@ function TV(name) {
    };
    TV.prototype.plusChannel = function() {
       if (this.channelNumber>=MIN_CHANNEL_NUMBER && this.channelNumber<MAX_CHANNEL_NUMBER) {
-         this.channel++;
+         this.channelNumber++;
       }
    };
    TV.prototype.minusChannel = function() {
-      if(this.channel>MIN_CHANNEL_NUMBER) {
-         this.channel--;
+      if(this.channelNumber>MIN_CHANNEL_NUMBER) {
+         this.channelNumber--;
       }
    };
    TV.prototype.getVolume = function() {

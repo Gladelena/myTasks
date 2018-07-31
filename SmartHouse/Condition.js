@@ -1,5 +1,5 @@
 "use strict";
-function Condition (name) {
+function Condition(name) {
    Device.call(this, "condition", name);
    this.MAX_VALUE_TEMPER = 30;
    this.MIN_VALUE_TEMPER = 15;
@@ -11,20 +11,20 @@ function Condition (name) {
    Condition.prototype = Object.create(Device.prototype);
    Condition.prototype.constructor = Condition;
 
-   Condition.prototype.plusTemperature = function(){
+   Condition.prototype.plusTemperature = function() {
       if (this._temperature < MAX_VALUE_TEMPER) {
          this._temperature++;
       }
    };
-   Condition.prototype.minusTemperature = function(){
+   Condition.prototype.minusTemperature = function() {
       if (this._temperature > MIN_VALUE_TEMPER){
          this._temperature--;
       }
    };
-   Condition.prototype.getTemperature = function(){
+   Condition.prototype.getTemperature = function() {
       return this._temperature;
    };
-   Condition.prototype.setMode = function(value){
+   Condition.prototype.setMode = function(value) {
       if (this._modes.includes(value)){
          this._currentMode = value;
       }

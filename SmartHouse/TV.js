@@ -16,14 +16,10 @@ function TV(name) {
    TV.prototype.getChannel = function() {
       return this.channelNumber;
    };
-   TV.prototype.isChannelValid = function(channelNumber) {
+   TV.prototype.setChannel = function(channelNumber) {
       if (channelNumber < this.MIN_CHANNEL_NUMBER || channelNumber > this.MAX_CHANNEL_NUMBER) {
          throw new RangeError("Incorrect channel number");
-      }
-      return true;
-   };
-   TV.prototype.setChannel = function(channelNumber) {
-      if (this.isChannelValid(channelNumber)){
+      } else {
          this.channelNumber = channelNumber;
       }
    };

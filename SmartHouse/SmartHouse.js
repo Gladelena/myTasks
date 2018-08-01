@@ -25,14 +25,15 @@ function SmartHouse() {
       }
    };
 
-   SmartHouse.prototype.getDeviceByName = function(type, name) {
+   SmartHouse.prototype.getDeviceByName = function(type, name){
       var array = this._devices[type];
       for (var i in array) {
          if (array[i].getName() == name) {
             return array[i];
+         } else {
+            return "there is no such device";
          }
       }
-         return "there is no such device";
    };
 
    SmartHouse.prototype.deleteDeviceByName = function(type, name) {

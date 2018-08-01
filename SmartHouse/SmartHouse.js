@@ -7,9 +7,9 @@ function SmartHouse() {
    };
 }
 
-   SmartHouse.prototype.addDevice = function (type, name) {
-      if (!this._devices[type].includes(this.getDeviceByName(type, name))){ 
-         switch (type) {
+   SmartHouse.prototype.addDevice = function(type, name) {
+      if (!this._devices[type].includes(this.getDeviceByName(type, name))) { 
+         switch(type) {
             case "tv":
                this._devices.tv.push(new TV(name));
                break;
@@ -25,7 +25,7 @@ function SmartHouse() {
       }
    };
 
-   SmartHouse.prototype.getDeviceByName = function(type, name){
+   SmartHouse.prototype.getDeviceByName = function(type, name) {
       var array = this._devices[type];
       for (var i in array) {
          if (array[i].getName()==name) {
@@ -38,7 +38,7 @@ function SmartHouse() {
    SmartHouse.prototype.deleteDeviceByName = function(type, name) {
       var array = this._devices[type];
       for (var i in array) {
-         if(array[i].getName()==name) {
+         if (array[i].getName() == name) {
             delete array[i];
          }
       }

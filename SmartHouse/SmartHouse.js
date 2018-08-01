@@ -28,7 +28,7 @@ function SmartHouse() {
    SmartHouse.prototype.getDeviceByName = function(type, name) {
       var array = this._devices[type];
       for (var i in array) {
-         if (array[i].getName()==name) {
+         if (array[i].getName() == name) {
             return array[i];
          }
       }

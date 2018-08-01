@@ -7,6 +7,17 @@ function SmartHouse() {
    };
 }
 
+   SmartHouse.prototype.getDeviceByName = function(type, name) {
+      var array = this._devices[type];
+      for (var i in array) {
+         if (array[i].getName() == name) {
+            return array[i];
+         } else {
+            return "there is no such device";
+         }
+      }
+   };
+
    SmartHouse.prototype.addDevice = function(type, name) {
       if (!this._devices[type].includes(this.getDeviceByName(type, name))) { 
          switch(type) {
@@ -22,17 +33,6 @@ function SmartHouse() {
          }
       } else {
          throw new TypeError("Name of device already exists");
-      }
-   };
-
-   SmartHouse.prototype.getDeviceByName = function(type, name) {
-      var array = this._devices[type];
-      for (var i in array) {
-         if (array[i].getName() == name) {
-            return array[i];
-         } else {
-            return "there is no such device";
-         }
       }
    };
 

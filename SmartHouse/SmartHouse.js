@@ -38,9 +38,9 @@ function SmartHouse() {
 
    SmartHouse.prototype.deleteDeviceByName = function(type, name) {
       var array = this._devices[type];
-      for (var i in array) {
-         if (array[i].getName() == name) {
-            delete array[i];
+         for (var i in array) {
+            if(array[i].getName() == name) {
+               array.splice(i, 1);
          }
       }
    };

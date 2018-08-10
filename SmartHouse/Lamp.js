@@ -12,31 +12,28 @@ function Lamp(name) {
    Lamp.prototype.getPower = function() {
       return this._power;
    };
-   Lamp.prototype.setPower = function(value) {
-      if (value < this.MIN_VALUE_POWER || value > this.MAX_VALUE_POWER || (value % 5)){
-         throw new RangeError("Incorrect value power. Value power must be multiple of five and in range from " + this.MIN_VALUE_POWER + " to " + this.MAX_VALUE_POWER);
-      } else {
-         this._power = value;
-      }
-   };
+     Lamp.prototype.setPower = function(value){
+    if (value>=this.MIN_VALUE_POWER && value<=this.MAX_VALUE_POWER) {
+      this._power = value;
+    }
+    this.isPowered();
+  };
    Lamp.prototype.plusPower = function() {
       if (this._power < this.MAX_VALUE_POWER) {
-         this._power += 5;
-      } else {
-         this.isPowered();
-      }
+         this._power++;
+      } 
    };
    Lamp.prototype.minusPower = function() {
       if(this._power > this.MIN_VALUE_POWER) {
-         this._power -= 5;
+         this._power--;
       } else {
-         this.isPowered();
+      this.isPowered();
       }
    };
    Lamp.prototype.isPowered = function() {
-      if (this._power == this.MIN_VALUE_POWER) {
-         this.off();
-      } else {
+      if (this._power != this.MIN_VALUE_POWER) {
          this.on();
+      } else {
+         this.off();
       }
    };

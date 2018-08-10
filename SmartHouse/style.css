@@ -1,0 +1,42 @@
+body {
+   width: 500px;
+   height: 500px;
+   margin: 20px;
+}
+#up-block {
+   margin: 20px;
+}
+button {
+   margin-top: 10px;
+}
+
+#controller {
+   min-height: 100px;
+   margin-bottom: 20px;
+   padding: 10px;
+   color: blue;
+   border: solid black 1px;
+   background-color: PaleGreen;
+}
+progress {
+   border: 1px solid black;
+   border-radius: 5px;
+   width: 260px;
+   height: 25px;
+}
+.centered {
+   text-align: center;
+}
+h4 {
+   color: red;
+   margin: 0;
+}
+#lampView {
+   height: 0;
+   width: 100px;
+   border-bottom: 100px solid yellow;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+   margin-top: 20px;
+   margin-bottom: 40px;
+}

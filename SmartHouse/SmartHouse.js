@@ -44,15 +44,3 @@ function SmartHouse() {
          }
       }
    };
-
-  
-var Smart = new SmartHouse();
-Smart.addDevice("tv", "Samsung Hall");
-Smart.addDevice("tv", "Sony Bedroom");
-Smart.addDevice("lamp", "Lamp Kitchen");
-Smart.addDevice("lamp", "Lamp Hall");
-Smart.addDevice("lamp", "Lamp Bathroom");
-Smart.addDevice("condition", "Toshiba Hall");
-Smart.addDevice("condition", "Toshiba Bedroom");
-Smart.deleteDeviceByName("lamp", "Lamp Kitchen");
-

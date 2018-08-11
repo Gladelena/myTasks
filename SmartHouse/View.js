@@ -22,10 +22,10 @@ class View {
    }
 
    addDeviceButton(){
-      let addDeviceBtn = document.getElementById('btn1');
+      let addDeviceBtn = document.getElementById("btn");
       addDeviceBtn.addEventListener("click", function() {
          let type = document.getElementById("type").value;
-         let name = document.getElementById('input1').value;
+         let name = document.getElementById("input").value;
          smartHouse.addDevice(type, name);
          View.addSelector(smartHouse.getDeviceByName(type, name));
          View.setDeviceView(smartHouse.getDeviceByName(type, name));

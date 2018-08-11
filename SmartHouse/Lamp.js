@@ -11,12 +11,12 @@ function Lamp(name) {
    Lamp.prototype.getPower = function() {
       return this._power;
    };
-     Lamp.prototype.setPower = function(value){
-    if (value>=Lamp.MIN_VALUE_POWER && value<=Lamp.MAX_VALUE_POWER) {
+   Lamp.prototype.setPower = function(value){
+      if (value>=Lamp.MIN_VALUE_POWER && value<=Lamp.MAX_VALUE_POWER) {
       this._power = value;
     }
     this.isPowered();
-  };
+   };
    Lamp.prototype.plusPower = function() {
       if (this._power < Lamp.MAX_VALUE_POWER) {
          this._power++;

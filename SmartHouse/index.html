@@ -11,10 +11,10 @@
       <link rel="stylesheet" type="text/css" href="./style.css" />
    </head>
    <body>
-     <div>
+   <div class="main container">
      <div id="up-block">
          <form>
-            <button  id="btn1" class="btn-sm btn-primary" type="button" name="button">Add device</button>
+            <button  id="btn1" type="button" name="button">Add device</button>
             <input id="input1" type="text" name="DeviceName" value="">
             <select id="type" class="custom-select" name="DeviceType">
                <option value="lamp">lamp</option>
@@ -31,23 +31,23 @@
                <progress value="0" max="100">0%</progress>
             <h4 id="changePower"></h4>
             <div >
-               <button id="lampMinus"class="btn btn-md btn-primary">decrease</button>
+               <button id="lampPlus">increase</button>
             </div>
             <div >
-               <button id="lampPlus" class="btn btn-md btn-primary">increase</button>
+               <button id="lampMinus">decrease</button>
             </div>
+            
             <div class="container">
                <div >
-                  <button type="button" name="button" class="deleteDevice btn btn-danger">Delete Device</button>
+                  <button type="button" name="button" class="deleteDevice">Delete Device</button>
                </div>
                <div >
-                  <select id="lampSelect" class="deviceSelect custom-select alert-primary" name="selectDevice"></select>
+                  <select id="lampSelect" class="deviceSelect" name="selectDevice"></select>
                </div>
             </div>
             </div>
          </div>
       </div>
-   </div>
    </body>
    <script src="./View.js"></script>
    <script src="./Main.js"></script>

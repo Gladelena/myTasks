@@ -24,12 +24,12 @@ class SmartHouse {
       } else {
          throw new TypeError("Name of device already exists");
       }
-   };
+   }
    addDevices(device) {
       if (this._devices.hasOwnProperty(device.getType())) {
          this._devices[device.getType()].push(device);
       }
-   };
+   }
    get(type, name){
       var array = this._devices[type];
       for (var i in array) {
@@ -38,7 +38,7 @@ class SmartHouse {
          } 
       }
       return "there is no such device";
-   };
+   }
 
    deleteDeviceByName(type, name) {
       var array = this._devices[type];
@@ -47,7 +47,7 @@ class SmartHouse {
                array.splice(i, 1);
          }
       }
-   };
+   }
 }
 var smart = new SmartHouse();
 smart.addDevice("tv", "qwe");

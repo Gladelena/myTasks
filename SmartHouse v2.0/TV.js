@@ -3,45 +3,52 @@ class TV extends Device{
    constructor(name){
       super ("tv", name);
       this._name = name;
-      TV.MIN_CHANNEL_NUMBER = 1;
-      TV.MAX_CHANNEL_NUMBER = 200;
-      TV.MIN_VOLUME_LEVEL = 0;
-      TV.MAX_VOLUME_LEVEL = 100;
-      TV.channelNumber = TV.MIN_CHANNEL_NUMBER;
-      TV.volume = 15;
+      this._channelNumber = TV.MIN_CHANNEL_NUMBER;
+      this._volume = 15;
    }
-
-   get() {
-      return this.channelNumber;
+   static get MIN_CHANNEL_NUMBER(){
+      return 1;
    }
-   set(channelNumber) {
-      if (channelNumber < TV.MIN_CHANNEL_NUMBER || channelNumber > TV.MAX_CHANNEL_NUMBER) {
+   static get MAX_CHANNEL_NUMBER(){
+      return 200;
+   }
+   static get MIN_VOLUME_LEVEL(){
+      return 0;
+   }
+   static get MAX_VOLUME_LEVEL(){
+      return 100;
+   }
+   get channelNumber() {
+      return this._channelNumber;
+   }
+   set channelNumber(channel) {
+      if (channel < TV.MIN_CHANNEL_NUMBER || channel > TV.MAX_CHANNEL_NUMBER) {
          throw new RangeError("Incorrect channel number");
       } else {
-         this.channelNumber = channelNumber;
+         this._channelNumber = channel;
       }
    }
    plusChannel() {
-      if (this.channelNumber >= TV.MIN_CHANNEL_NUMBER && this.channelNumber < TV.MAX_CHANNEL_NUMBER) {
-         this.channelNumber++;
+      if (this._channelNumber >= TV.MIN_CHANNEL_NUMBER && this._channelNumber < TV.MAX_CHANNEL_NUMBER) {
+         this._channelNumber++;
       }
    }
    minusChannel() {
-      if(this.channelNumber > TV.MIN_CHANNEL_NUMBER) {
-         this.channelNumber--;
+      if(this._channelNumber > TV.MIN_CHANNEL_NUMBER) {
+         this._channelNumber--;
       }
    }
-   get() {
-      return this.volume;
+   get volume() {
+      return this._volume;
    }
    plusVolume() {
-      if(this.volume < TV.MAX_VOLUME) {
-         this.volume++;
+      if(this._volume < TV.MAX_VOLUME_LEVEL) {
+         this._volume++;
       }
    }
    minusVolume() {
-      if(this.volume > TV.MIN_VOLUME) {
-         this.volume--;
+      if(this._volume > TV.MIN_VOLUME_LEVEL) {
+         this._volume--;
       }
    }
 }

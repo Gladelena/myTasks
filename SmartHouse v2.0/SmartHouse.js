@@ -26,8 +26,8 @@ class SmartHouse{
       }
    }
    addDevices(device) {
-      if (this._devices.hasOwnProperty(device.getType())) {
-         this._devices[device.getType()].push(device);
+      if (this._devices.hasOwnProperty(device.type)) {
+         this._devices[device.type].push(device);
       }
    }
    getDeviceByName(type, name){

@@ -1,7 +1,7 @@
 "use strict";
-class SmartHouse{
-   constructor(){
-   this._devices = {
+class SmartHouse {
+   constructor() {
+      this._devices = {
          tv: [],
          condition:[],
          lamp: []
@@ -9,7 +9,7 @@ class SmartHouse{
    }
 
    addDevice(type, name) {
-      if(!this._devices[type].includes(this.getDeviceByName(type, name))){ 
+      if (!this._devices[type].includes(this.getDeviceByName(type, name))) { 
          switch (type) {
             case "tv":
                this._devices.tv.push(new TV(name));
@@ -30,8 +30,8 @@ class SmartHouse{
          this._devices[device.type].push(device);
       }
    }
-   getDeviceByName(type, name){
-      var array = this._devices[type];
+   getDeviceByName(type, name) {
+      let array = this._devices[type];
       for (var i in array) {
          if (array[i].name == name) {
             return array[i];
@@ -41,10 +41,10 @@ class SmartHouse{
    }
 
    deleteDeviceByName(type, name) {
-      var array = this._devices[type];
-         for (var i in array) {
-            if(array[i].name == name) {
-               array.splice(i, 1);
+      let array = this._devices[type];
+      for (var i in array) {
+         if(array[i].name == name) {
+            array.splice(i, 1);
          }
       }
    }

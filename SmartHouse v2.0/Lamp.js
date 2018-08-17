@@ -1,6 +1,6 @@
 "use strict";
-class Lamp extends Device{
-   constructor(name){
+class Lamp extends Device {
+   constructor(name) {
       super ("lamp", name);
       this._power = Lamp.MIN_VALUE_POWER;
    }
@@ -19,7 +19,7 @@ class Lamp extends Device{
       } 
    }
    minusPower() {
-      if(this._power > Lamp.MIN_VALUE_POWER) {
+      if (this._power > Lamp.MIN_VALUE_POWER) {
          this._power--;
       } else {
          this.isPowered();
